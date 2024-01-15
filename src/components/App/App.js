@@ -120,7 +120,7 @@ export default class App extends Component {
       <div className={styles['App-div']}>
         <Searchbar onSubmit={this.handleSearchbarSubmit} />
         {loader && <Loader />}
-        {hits.length && (
+        {hits.length > 0 && (
           <ImageGallery hits={hits} onHitClick={this.handleHitClick} />
         )}
         {isModalShow && (
